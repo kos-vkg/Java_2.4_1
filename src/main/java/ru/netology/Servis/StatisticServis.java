@@ -11,11 +11,7 @@ public class StatisticServis {
     }
 
     public int averageSalesPerMonth(int[] sales) {
-        int total = 0;
-        for (int sale : sales) {
-            total += sale;
-        }
-        return total / sales.length;
+        return  totalSales(sales) / sales.length;
     }
 
     public int monthInWhichSalesMax(int[] sales) {
@@ -48,11 +44,7 @@ public class StatisticServis {
     }
 
     public int numberOfMonthsBelowAverage(int[] sales) {
-        int total = 0;
-        for (int sale : sales) {
-            total += sale;
-        }
-        int average = total / sales.length;
+        int average = averageSalesPerMonth(sales);
         int number = 0;
         for (int sale : sales) {
             if (sale < average) {
@@ -63,11 +55,7 @@ public class StatisticServis {
     }
 
     public int numberOfMonthsAboveAverage(int[] sales) {
-        int total = 0;
-        for (int sale : sales) {
-            total += sale;
-        }
-        int average = total / sales.length;
+        int average = averageSalesPerMonth(sales);
         int number = 0;
         for (int sale : sales) {
             if (sale > average) {
